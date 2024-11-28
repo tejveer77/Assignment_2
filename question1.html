@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+<body>
+    <script>
+        function calculateArea(width, height) {
+    while (width <= 0 || height <= 0 || !width || !height) {
+        width = prompt("Please enter a valid width :");
+        height = prompt("Please enter a valid height :");
+        
+    }
+    let area = width * height;
+    console.log("Area of the rectangle:", area);
+}
+calculateArea(5, 3);  
+calculateArea(10, 7); 
+calculateArea(20, 10); 
+
+
+
+    </script>
+</body>
+</html>

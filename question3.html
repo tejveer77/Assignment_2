@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style>
+        ul {
+            font-family: Arial, sans-serif;
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f0f0f0;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s ease; 
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <script>
+        
+        function getRandomString() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+            let randomString = '';
+            for (let i = 0; i < 10; i++) { 
+                randomString += chars[Math.floor(Math.random() * chars.length)];
+            }
+            return randomString;
+        }
+
+       
+        window.onload = function() {
+            const ul = document.getElementById('itemList');
+            const fourthItem = document.createElement('li');
+            fourthItem.textContent = 'Fourth item';
+            ul.appendChild(fourthItem);
+        };
+
+        
+        const listItems = document.querySelectorAll('li');
+        listItems.forEach(item => {
+            item.addEventListener('click', function() {
+                item.textContent = getRandomString();
+            });
+        });
+    </script>
+
+</body>
+</html>
